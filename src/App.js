@@ -1,13 +1,9 @@
 import React from 'react';
 import Home from './containers/home/Home';
+import './App.css';
 
 const App = () => {
-  return (
-    <h1>
-      Weather App
-      <Home />
-    </h1>
-  );
+  return <Home />;
 };
 
 export default App;

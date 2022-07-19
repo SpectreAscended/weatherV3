@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './home.css';
 import Left from '../left/Left';
+import Right from '../right/Right';
 
 import Input from '../../components/input/Input';
 
@@ -43,8 +44,8 @@ const Home = () => {
 
   return (
     <main className="main">
-      <Input queryResult={searchCityHandler} />
       <Left weather={weatherData} />
+      <Right queryResult={searchCityHandler} />
     </main>
   );
 };
