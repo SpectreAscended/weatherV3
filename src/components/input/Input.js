@@ -5,17 +5,16 @@ const Input = props => {
   const [query, setQuery] = useState();
   const inputText = useRef();
 
-  const queryHandler = e => {
+  const queryHandler = () => {
     if (inputText.current.value.length === 0) return;
-    const cleanText = inputText.current.value.toLowerCase();
-    setQuery(cleanText);
+    const cleanQuery = inputText.current.value.trim().toLowerCase();
+    setQuery(cleanQuery);
   };
 
   const formHandler = e => {
     e.preventDefault();
-    console.log(query);
-    inputText.current.value = '';
     props.queryResult(query);
+    inputText.current.value = '';
   };
 
   return (

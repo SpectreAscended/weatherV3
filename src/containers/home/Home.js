@@ -18,7 +18,7 @@ const Home = () => {
 
       if (!res.ok)
         throw new Error(
-          `Couldn't find your city.  Please check your spelling at try again.`
+          `Couldn't find your city.  Please check your spelling and try again.`
         );
 
       const data = await res.json();
@@ -55,7 +55,11 @@ const Home = () => {
   return (
     <main className="main">
       <Left weather={weatherData} loading={isLoading} error={isError} />
-      <Right queryResult={searchCityHandler} />
+      <Right
+        queryResult={searchCityHandler}
+        weather={weatherData}
+        error={isError}
+      />
     </main>
   );
 };

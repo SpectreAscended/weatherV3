@@ -27,8 +27,6 @@ const Left = ({ weather, loading, error }) => {
 
   let content;
 
-  console.log(loading);
-
   if (loading) content = <p>Loading...</p>;
   else if (error)
     content = (
