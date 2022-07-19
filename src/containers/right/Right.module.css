@@ -2,4 +2,5 @@
   flex-basis: 30%;
   background-color: rgba(25, 55, 80, 0.644);
   backdrop-filter: blur(10px);
+  height: 100vh;
 }

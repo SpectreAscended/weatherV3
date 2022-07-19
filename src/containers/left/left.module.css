@@ -2,7 +2,15 @@
   flex: auto;
 }
 
+.leftCard {
+  margin: 5rem;
+}
+
 ul {
   list-style: none;
+  font-size: 2rem;
+}
+
+p {
   font-size: 2rem;
 }

@@ -3,4 +3,5 @@
   padding: 1rem;
   border-radius: 1rem;
   max-width: 30rem;
+  backdrop-filter: blur(0.5rem);
 }
