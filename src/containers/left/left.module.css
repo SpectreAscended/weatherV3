@@ -15,6 +15,16 @@ p {
   font-size: 2rem;
 }
 
-.weather-brief {
-  margin-left: 20rem;
+.loading {
+  font-size: 3rem;
+  text-align: center;
+  grid-column: 1 / span 3;
+}
+
+.time {
+  color: #ddd;
+}
+
+.feels-like {
+  margin-left: 1rem;
 }
