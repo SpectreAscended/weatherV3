@@ -10,7 +10,12 @@ const Left = ({ weather, loading, error }) => {
     return (
       <>
         <h2>{weather.currentTemp}°</h2>
-        <h1>{weather.currentCity}</h1>
+        <div className={classes['current-city']}>
+          <h1>{weather.currentCity}</h1>
+          <p className={classes['current-description']}>
+            {weather.currentDescription}
+          </p>
+        </div>
         <p className={classes['feels-like']}>
           Feels like {weather.currentTempFeelsLike}°
         </p>
@@ -37,7 +42,7 @@ const Left = ({ weather, loading, error }) => {
 
   return (
     <div className={classes.left}>
-      <MiniDisplay className={classes['weather-brief']}>{content}</MiniDisplay>
+      <MiniDisplay>{content}</MiniDisplay>
     </div>
   );
 };

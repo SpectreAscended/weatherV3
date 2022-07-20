@@ -2,10 +2,6 @@
   flex: auto;
 }
 
-/* .leftCard {
-  margin: 5rem;
-} */
-
 ul {
   list-style: none;
   font-size: 2rem;
@@ -30,6 +26,19 @@ p {
 .feels-like {
   grid-column: 1;
   margin-left: -3rem;
+}
+
+.current-description {
+  text-transform: capitalize;
+}
+
+.current-city {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-self: center;
+  grid-column: 2 span / 4;
+  /* margin-bottom: 1rem; */
 }
 
 /* Styling for the mini display can also be found in Minidisplay.module.css */
