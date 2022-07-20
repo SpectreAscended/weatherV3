@@ -23,8 +23,13 @@ p {
 
 .time {
   color: #ddd;
+  grid-column: 2 / span 3;
+  justify-self: center;
 }
 
 .feels-like {
-  margin-left: 1rem;
+  grid-column: 1;
+  margin-left: -3rem;
 }
+
+/* Styling for the mini display can also be found in Minidisplay.module.css */
