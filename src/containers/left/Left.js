@@ -25,7 +25,9 @@ const Left = ({ weather, loading, error }) => {
     content = <p className={classes.loading}>Loading...</p>;
   } else if (error) {
     content = (
-      <p>Cannot find city. Please check your spelling and try again.</p>
+      <p className={classes.loading}>
+        City not found. Please check your spelling and try again.
+      </p>
     );
   } else if (weather.currentCity) {
     content = weatherObject();

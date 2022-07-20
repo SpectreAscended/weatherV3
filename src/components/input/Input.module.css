@@ -1,30 +1,39 @@
 .form {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 95%;
+  margin-left: auto;
+}
+
+.form:focus-within {
+  box-shadow: 0 0 3.5rem #ddd;
 }
 
 .input {
-  font-size: 2.5rem;
-  padding: 1rem 1.5rem;
+  font-size: 3rem;
+  padding: 1rem 2rem;
   outline: none;
   border: none;
-  background-color: #333;
+  background-color: #16171a;
   color: #efefef;
-  width: 80%;
-  margin-left: auto;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
 }
 
 .btn {
   border: none;
   font-size: 2rem;
   outline: none;
-  background-color: #222;
+  background-color: #1e5380;
   color: #efefef;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.33rem;
+  padding: 2rem 4rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: rgba(34, 34, 34, 0.9);
+  background-color: #1b4b73;
+}
+
+.btn img {
+  width: 3rem;
 }

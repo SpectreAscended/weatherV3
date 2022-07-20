@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import classes from './Input.module.css';
+import search from '../../assets/Magnefying glass - black.svg';
 
 const Input = props => {
   const [query, setQuery] = useState();
@@ -22,12 +23,13 @@ const Input = props => {
       <input
         className={classes.input}
         type="text"
-        placeholder="Search city"
         ref={inputText}
         autoFocus
         onChange={queryHandler}
       />
-      <button className={classes.btn}>Search</button>
+      <button className={classes.btn}>
+        <img src={search} />
+      </button>
     </form>
   );
 };
