@@ -1,7 +1,9 @@
 .card {
-  background-color: rgba(25, 55, 80, 0.644);
+  background-color: rgba(13, 17, 26, 0.631);
   padding: 1rem;
   border-radius: 1rem;
   max-width: 30rem;
   backdrop-filter: blur(0.5rem);
+  margin-left: 20rem;
+  margin-top: 10rem;
 }

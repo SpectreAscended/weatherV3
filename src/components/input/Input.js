@@ -6,13 +6,13 @@ const Input = props => {
   const inputText = useRef();
 
   const queryHandler = () => {
-    if (inputText.current.value.length === 0) return;
     const cleanQuery = inputText.current.value.trim().toLowerCase();
     setQuery(cleanQuery);
   };
 
   const formHandler = e => {
     e.preventDefault();
+    if (inputText.current.value.length === 0) return;
     props.queryResult(query);
     inputText.current.value = '';
   };
@@ -24,6 +24,7 @@ const Input = props => {
         type="text"
         placeholder="Search city"
         ref={inputText}
+        autoFocus
         onChange={queryHandler}
       />
       <button className={classes.btn}>Search</button>

@@ -2,9 +2,9 @@
   flex: auto;
 }
 
-.leftCard {
+/* .leftCard {
   margin: 5rem;
-}
+} */
 
 ul {
   list-style: none;
@@ -13,4 +13,8 @@ ul {
 
 p {
   font-size: 2rem;
+}
+
+.weather-brief {
+  margin-left: 20rem;
 }

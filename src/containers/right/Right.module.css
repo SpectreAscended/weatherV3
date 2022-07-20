@@ -1,6 +1,6 @@
 .section__right {
-  flex-basis: 30%;
-  background-color: rgba(25, 55, 80, 0.644);
+  flex-basis: 40%;
+  background-color: rgba(13, 17, 26, 0.631);
   backdrop-filter: blur(10px);
   height: 100vh;
 }

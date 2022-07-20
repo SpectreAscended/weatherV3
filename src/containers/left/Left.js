@@ -17,9 +17,9 @@ const Left = ({ weather, loading, error }) => {
         <li>Pressure: {weather.pressure} kps</li>
         <li>
           Wind speed: &nbsp;
-          <WindDirection windDir={weather.windDir} /> {weather.windSpeed} kph
+          <WindDirection windDir={weather.windDir} /> {weather.windSpeed} km/h
         </li>
-        {weather.windGust ? <li>Gusting: {weather.windGust} kph</li> : ''}
+        {weather.windGust ? <li>Gusting: {weather.windGust} km/h</li> : ''}
         <li>{getTime(weather.time)}</li>
       </ul>
     );
@@ -27,12 +27,13 @@ const Left = ({ weather, loading, error }) => {
 
   let content;
 
-  if (loading) content = <p>Loading...</p>;
-  else if (error)
+  if (loading) {
+    content = <p>Loading...</p>;
+  } else if (error) {
     content = (
       <p>Cannot find city. Please check your spelling and try again.</p>
     );
-  else if (weather.currentCity) {
+  } else if (weather.currentCity) {
     content = weatherObject();
   } else {
     content = <p>Please enter a city</p>;
@@ -40,7 +41,7 @@ const Left = ({ weather, loading, error }) => {
 
   return (
     <div className={classes.left}>
-      <Card>{content}</Card>
+      <Card className={classes['weather-brief']}>{content}</Card>
     </div>
   );
 };

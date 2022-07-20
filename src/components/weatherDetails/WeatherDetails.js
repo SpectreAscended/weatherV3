@@ -24,13 +24,13 @@ const WeatherDetails = ({ weather, loading, error }) => {
           <span>Wind speed: </span>
           <span>
             <WindDirection windDir={weather.windDir} /> &nbsp;
-            {weather.windSpeed} kph
+            {weather.windSpeed} km/h
           </span>
         </li>
         {weather.windGust ? (
           <li>
             <span>Gusting:</span>
-            <span>{weather.windGust} kph</span>
+            <span>{weather.windGust} km/h</span>
           </li>
         ) : (
           ''

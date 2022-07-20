@@ -1,3 +1,9 @@
+::root {
+  --clr-midnight-neutral-200: #c1c8cf;
+  --clr-midnight-primary-700: rgba(15, 42, 64, 0.97);
+  --clr-midnight-primary-600: rgba(13, 17, 26, 0.631);
+}
+
 *,
 *::before,
 *::after {
@@ -9,6 +15,7 @@
 html {
   font-size: 62.5%;
   font-family: sans-serif;
+  color: var(--clr-midnight-neutral-200);
 }
 
 body {

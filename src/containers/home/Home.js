@@ -32,7 +32,7 @@ const Home = () => {
         currentTemp: Math.round(data.main.temp),
         currentTempFeelsLike: Math.round(data.main.feels_like),
         humidity: data.main.humidity,
-        pressure: data.main.pressure / 100,
+        pressure: data.main.pressure / 10,
         windDir: data.wind.deg,
         windSpeed: Math.round(data.wind.speed * 3.6),
         windGust: Math.round(data.wind.gust * 3.6),
