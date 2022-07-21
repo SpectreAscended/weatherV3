@@ -9,7 +9,10 @@ const Right = props => {
     <section className={classes['section__right']}>
       <Input queryResult={props.queryResult} />
       <div className={classes['section__right-container']}>
-        <PreviousSearches />
+        <PreviousSearches
+          searchList={props.searchList}
+          queryResult={props.queryResult}
+        />
         <WeatherDetails weather={props.weather} error={props.error} />
       </div>
     </section>

@@ -1,22 +1,14 @@
 import React from 'react';
 import classes from './PreviousSearches.module.css';
 
-const PreviousSearches = props => {
-  const prevSearches = [
-    'Saskatoon',
-    'Regina',
-    'Moose Jaw',
-    'Edmonton',
-    'Calgary',
-  ];
-
-  const getName = name => {
-    console.log(name.target.innerText);
+const PreviousSearches = ({ searchList, queryResult }) => {
+  const querySearch = name => {
+    queryResult(name.target.innerText.toLowerCase());
   };
 
-  const content = prevSearches.map((name, index) => {
+  const content = searchList.map((name, index) => {
     return (
-      <li key={index} onClick={getName}>
+      <li key={index} onClick={querySearch}>
         {name}
       </li>
     );
@@ -24,7 +16,12 @@ const PreviousSearches = props => {
 
   //   console.log(content);
 
-  return <ul>{content}</ul>;
+  return (
+    <>
+      <h3 className={classes['heading-previous']}>Previous searches</h3>
+      <ul>{content}</ul>
+    </>
+  );
 };
 
 export default PreviousSearches;

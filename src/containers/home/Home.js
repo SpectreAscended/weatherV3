@@ -76,7 +76,7 @@ const Home = () => {
     if (queryList.length > 4) {
       queryList.pop();
     }
-    setSearchList(prevSearchList => [query, ...queryList]);
+    setSearchList([query, ...queryList]);
   };
   console.log(searchList);
 
@@ -87,6 +87,7 @@ const Home = () => {
         queryResult={searchCityHandler}
         weather={weatherData}
         error={isError}
+        searchList={searchList}
       />
     </main>
   );
