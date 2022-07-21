@@ -7,6 +7,7 @@ const Home = () => {
   const [weatherData, setWeatherData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [searchList, setSearchList] = useState([]);
 
   const searchCityHandler = async query => {
     try {
@@ -23,6 +24,7 @@ const Home = () => {
 
       const data = await res.json();
 
+      searchListHandler(searchList, query);
       setIsLoading(false);
 
       console.log(data);
@@ -51,6 +53,32 @@ const Home = () => {
   };
 
   console.log(weatherData);
+  // console.log(searchList);
+
+  // const searchListHandler = (list, query) => {
+  //   if (!list.includes(query)) {
+  //     setSearchList(prevSearchList => [query, ...prevSearchList]);
+  //   } else {
+  //     const filteredList = list.filter(item => {
+  //       console.log(list);
+  //       return !item.includes(query);
+  //     });
+  //     console.log(filteredList);
+  //     setSearchList(prevSearchList => [searchList, ...prevSearchList]);
+  //   }
+  // };
+  const searchListHandler = (list, query) => {
+    const [...queryList] = [...list];
+    if (queryList.includes(query)) {
+      const index = queryList.indexOf(query);
+      queryList.splice(index, 1);
+    }
+    if (queryList.length > 4) {
+      queryList.pop();
+    }
+    setSearchList(prevSearchList => [query, ...queryList]);
+  };
+  console.log(searchList);
 
   return (
     <main className="main">

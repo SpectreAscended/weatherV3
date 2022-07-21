@@ -22,7 +22,7 @@ const PreviousSearches = props => {
     );
   });
 
-  console.log(content);
+  //   console.log(content);
 
   return <ul>{content}</ul>;
 };

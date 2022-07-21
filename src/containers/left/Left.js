@@ -4,8 +4,6 @@ import classes from './left.module.css';
 import MiniDisplay from '../../components/card/MiniDisplay';
 
 const Left = ({ weather, loading, error }) => {
-  console.log(weather);
-
   const weatherObject = () => {
     return (
       <>

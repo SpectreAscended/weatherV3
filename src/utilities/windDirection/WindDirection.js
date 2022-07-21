@@ -11,7 +11,6 @@ const WindDirection = props => {
     if (dir >= 202.5 && dir < 247.5) windDirectionAlpha = 'SW';
     if (dir >= 247.5 && dir < 292.5) windDirectionAlpha = 'W';
     if (dir >= 292.5 && dir < 337.5) windDirectionAlpha = 'NW';
-    console.log(windDirectionAlpha);
     return windDirectionAlpha;
   };
   return <>{getWindDirection(props.windDir)}</>;
