@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import classes from './Input.module.css';
-import search from '../../assets/Magnefying glass - black.svg';
+import searchImg from '../../assets/Magnefying glass - black.svg';
 
 const Input = props => {
   const [query, setQuery] = useState();
@@ -31,7 +31,7 @@ const Input = props => {
         onChange={queryHandler}
       />
       <button className={classes.btn}>
-        <img src={search} alt="Search" />
+        <img src={searchImg} alt="Search" />
       </button>
     </form>
   );
