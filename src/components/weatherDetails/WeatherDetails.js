@@ -51,7 +51,7 @@ const WeatherDetails = ({ weather, loading, error }) => {
   return (
     <section className={classes['section__weather-details']}>
       <div className={classes['weather-details--container']}>
-        <h2 className="heading-secondary">Current weather</h2>
+        <h3 className={classes['heading-current-weather']}>Current weather</h3>
         {content}
       </div>
     </section>

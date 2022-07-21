@@ -2,14 +2,18 @@ import React from 'react';
 import classes from './PreviousSearches.module.css';
 
 const PreviousSearches = ({ searchList, queryResult }) => {
-  const querySearch = name => {
-    queryResult(name.target.innerText.toLowerCase());
+  const querySearch = city => {
+    queryResult(city.target.innerText.toLowerCase());
   };
 
-  const content = searchList.map((name, index) => {
+  const content = searchList.map((city, index) => {
     return (
-      <li key={index} onClick={querySearch}>
-        {name}
+      <li
+        className={classes['previous-search__list--item']}
+        key={index}
+        onClick={querySearch}
+      >
+        {city}
       </li>
     );
   });

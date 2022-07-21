@@ -10,3 +10,11 @@ li {
   justify-content: space-between;
   margin-right: 2rem;
 }
+
+.heading-current-weather {
+  font-size: 3rem;
+  font-weight: 400;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}

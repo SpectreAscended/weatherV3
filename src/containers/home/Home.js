@@ -78,7 +78,6 @@ const Home = () => {
     }
     setSearchList([query, ...queryList]);
   };
-  console.log(searchList);
 
   return (
     <main className="main">
