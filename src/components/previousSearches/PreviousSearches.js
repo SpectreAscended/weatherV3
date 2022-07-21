@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './PreviousSearches.module.css';
 
 const PreviousSearches = ({ searchList, queryResult }) => {
@@ -17,6 +17,11 @@ const PreviousSearches = ({ searchList, queryResult }) => {
       </li>
     );
   });
+
+  useEffect(() => {
+    localStorage.clear();
+    localStorage.setItem('queryList', JSON.stringify(searchList));
+  }, [searchList]);
 
   //   console.log(content);
 

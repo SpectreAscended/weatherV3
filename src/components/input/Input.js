@@ -13,7 +13,10 @@ const Input = props => {
 
   const formHandler = e => {
     e.preventDefault();
-    if (inputText.current.value.length === 0) return;
+    if (inputText.current.value.trim().length === 0) {
+      inputText.current.value = '';
+      return;
+    }
     props.queryResult(query);
     inputText.current.value = '';
   };
@@ -28,7 +31,7 @@ const Input = props => {
         onChange={queryHandler}
       />
       <button className={classes.btn}>
-        <img src={search} />
+        <img src={search} alt="Search" />
       </button>
     </form>
   );
