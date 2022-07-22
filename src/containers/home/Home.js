@@ -8,13 +8,13 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [searchList, setSearchList] = useState([]);
-  const [savedDataIsLoaded, setSavedDataIsLoaded] = useState(false);
+  const [dataIsLoaded, setdataIsLoaded] = useState(false);
 
   useEffect(() => {
     const loadedList = JSON.parse(localStorage.getItem('searchList'));
     if (loadedList) {
       setSearchList(loadedList);
-      setSavedDataIsLoaded(true);
+      setdataIsLoaded(true);
     }
   }, []);
 
@@ -55,6 +55,7 @@ const Home = () => {
 
       searchListHandler(searchList, query);
       setIsLoading(false);
+      setdataIsLoaded(true);
     } catch (err) {
       setIsLoading(false);
       setIsError(true);
@@ -82,7 +83,7 @@ const Home = () => {
         weather={weatherData}
         error={isError}
         searchList={searchList}
-        loaded={savedDataIsLoaded}
+        loaded={dataIsLoaded}
       />
     </main>
   );
