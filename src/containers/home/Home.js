@@ -14,6 +14,7 @@ const Home = () => {
       if (query === weatherData.query) return;
       setIsError(false);
       setIsLoading(true);
+
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=d9819c90d382ddc65dcc500f8e98498f&units=metric`
       );
@@ -24,11 +25,6 @@ const Home = () => {
         );
 
       const data = await res.json();
-
-      searchListHandler(searchList, query);
-      setIsLoading(false);
-
-      console.log(data);
 
       setWeatherData({
         query: query,
@@ -47,14 +43,15 @@ const Home = () => {
         snow: data?.snow?.['1h'] / 10,
         time: data.dt,
       });
+
+      searchListHandler(searchList, query);
+      setIsLoading(false);
     } catch (err) {
       setIsLoading(false);
       setIsError(true);
       console.error(err.message);
     }
   };
-
-  console.log(weatherData);
 
   const searchListHandler = (list, query) => {
     const [...queryList] = [...list];
