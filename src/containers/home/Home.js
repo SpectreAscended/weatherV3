@@ -8,13 +8,13 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [searchList, setSearchList] = useState([]);
-  const [dataIsLoaded, setdataIsLoaded] = useState(false);
+  const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
   useEffect(() => {
     const loadedList = JSON.parse(localStorage.getItem('searchList'));
     if (loadedList) {
       setSearchList(loadedList);
-      setdataIsLoaded(true);
+      setDataIsLoaded(true);
     }
   }, []);
 
@@ -55,10 +55,13 @@ const Home = () => {
       console.log(data);
       searchListHandler(searchList, query);
       setIsLoading(false);
-      setdataIsLoaded(true);
+      if (!dataIsLoaded) {
+        setDataIsLoaded(true);
+      }
     } catch (err) {
       setIsLoading(false);
       setIsError(true);
+      setDataIsLoaded(false);
       console.error(err.message);
     }
   };

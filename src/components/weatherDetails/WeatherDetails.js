@@ -18,7 +18,7 @@ const WeatherDetails = ({ weather, loading, error }) => {
         </li>
         <li>
           <span>Pressure:</span>
-          <span>{weather.pressure} kps</span>
+          <span>{weather.pressure} kPa</span>
         </li>
         <li>
           <span>Wind speed: </span>

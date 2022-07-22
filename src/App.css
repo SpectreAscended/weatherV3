@@ -18,6 +18,22 @@ html {
   color: var(--clr-midnight-neutral-200);
 }
 
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 35%;
+  }
+}
+
 body {
   background-image: url('./assets/midnight-city.jpg');
   background-size: cover;

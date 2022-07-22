@@ -1,0 +1,29 @@
+nav {
+  max-width: 100%;
+  background-color: orangered;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+nav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-drop-down {
+  background-color: #000;
+  max-height: 100%;
+  max-width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.nav-settings {
+  max-width: 10rem;
+  max-height: 100%;
+  flex-grow: 1;
+  background-color: gold;
+}

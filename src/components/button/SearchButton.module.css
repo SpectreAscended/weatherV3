@@ -1,0 +1,18 @@
+.search-button {
+  border: none;
+  outline: none;
+  background-color: #1e5380;
+  color: #efefef;
+  cursor: pointer;
+  max-width: 15rem;
+  padding: 2rem 4rem;
+}
+
+.search-button:hover {
+  background-color: #1b4b73;
+}
+
+.search-button-icon {
+  display: inline-block;
+  width: 3rem;
+}
