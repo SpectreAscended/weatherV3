@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import classes from './PreviousSearches.module.css';
 
-const PreviousSearches = ({ searchList, queryResult }) => {
+const PreviousSearches = ({ searchList, queryResult, loaded }) => {
   const querySearch = city => {
     queryResult(city.target.innerText.toLowerCase());
   };
@@ -19,9 +19,11 @@ const PreviousSearches = ({ searchList, queryResult }) => {
   });
 
   useEffect(() => {
-    // localStorage.clear();
-    localStorage.setItem('queryList', JSON.stringify(searchList));
-  }, [searchList]);
+    if (loaded) {
+      queryResult(searchList[0]);
+      localStorage.setItem('searchList', JSON.stringify(searchList));
+    }
+  }, [searchList, loaded, queryResult]);
 
   //   console.log(content);
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.css';
 import Left from '../left/Left';
 import Right from '../right/Right';
@@ -8,6 +8,15 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [searchList, setSearchList] = useState([]);
+  const [savedDataIsLoaded, setSavedDataIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadedList = JSON.parse(localStorage.getItem('searchList'));
+    if (loadedList) {
+      setSearchList(loadedList);
+      setSavedDataIsLoaded(true);
+    }
+  }, []);
 
   const searchCityHandler = async query => {
     try {
@@ -73,6 +82,7 @@ const Home = () => {
         weather={weatherData}
         error={isError}
         searchList={searchList}
+        loaded={savedDataIsLoaded}
       />
     </main>
   );

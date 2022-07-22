@@ -12,6 +12,7 @@ const Right = props => {
         <PreviousSearches
           searchList={props.searchList}
           queryResult={props.queryResult}
+          loaded={props.loaded}
         />
         <WeatherDetails weather={props.weather} error={props.error} />
       </div>
