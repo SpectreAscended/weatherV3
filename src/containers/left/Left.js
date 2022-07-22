@@ -7,17 +7,19 @@ const Left = ({ weather, loading, error }) => {
   const weatherObject = () => {
     return (
       <>
-        <h2>{weather.currentTemp}°</h2>
+        <div className={classes['current-temp']}>
+          <h2>{weather.currentTemp}°</h2>
+          <p className={classes['feels-like']}>
+            Feels like {weather.currentTempFeelsLike}°
+          </p>
+        </div>
         <div className={classes['current-city']}>
           <h1>{weather.currentCity}</h1>
           <p className={classes['current-description']}>
             {weather.currentDescription}
           </p>
+          <p className={classes.time}>{getTime(weather.time)}</p>
         </div>
-        <p className={classes['feels-like']}>
-          Feels like {weather.currentTempFeelsLike}°
-        </p>
-        <p className={classes.time}>{getTime(weather.time)}</p>
       </>
     );
   };

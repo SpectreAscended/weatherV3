@@ -11,6 +11,7 @@ const Home = () => {
 
   const searchCityHandler = async query => {
     try {
+      if (query === weatherData.query) return;
       setIsError(false);
       setIsLoading(true);
       const res = await fetch(
@@ -30,6 +31,7 @@ const Home = () => {
       console.log(data);
 
       setWeatherData({
+        query: query,
         currentCity: data.name,
         currentTemp: Math.round(data.main.temp),
         currentTempFeelsLike: Math.round(data.main.feels_like),
@@ -53,20 +55,7 @@ const Home = () => {
   };
 
   console.log(weatherData);
-  // console.log(searchList);
 
-  // const searchListHandler = (list, query) => {
-  //   if (!list.includes(query)) {
-  //     setSearchList(prevSearchList => [query, ...prevSearchList]);
-  //   } else {
-  //     const filteredList = list.filter(item => {
-  //       console.log(list);
-  //       return !item.includes(query);
-  //     });
-  //     console.log(filteredList);
-  //     setSearchList(prevSearchList => [searchList, ...prevSearchList]);
-  //   }
-  // };
   const searchListHandler = (list, query) => {
     const [...queryList] = [...list];
     if (queryList.includes(query)) {

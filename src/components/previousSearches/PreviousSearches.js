@@ -19,7 +19,7 @@ const PreviousSearches = ({ searchList, queryResult }) => {
   });
 
   useEffect(() => {
-    localStorage.clear();
+    // localStorage.clear();
     localStorage.setItem('queryList', JSON.stringify(searchList));
   }, [searchList]);
 
