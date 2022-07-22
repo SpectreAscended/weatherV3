@@ -11,7 +11,7 @@ const Home = () => {
 
   const searchCityHandler = async query => {
     try {
-      if (query === weatherData.query) return;
+      if (query === weatherData.query && !isError) return;
       setIsError(false);
       setIsLoading(true);
 
