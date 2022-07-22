@@ -35,6 +35,22 @@ const WeatherDetails = ({ weather, loading, error }) => {
         ) : (
           ''
         )}
+        {weather.rain ? (
+          <li>
+            <span>Rain:</span>
+            <span>{weather.rain}mm</span>
+          </li>
+        ) : (
+          ''
+        )}
+        {weather.snow ? (
+          <li>
+            <span>Snow:</span>
+            <span>{weather.rain}cm</span>
+          </li>
+        ) : (
+          ''
+        )}
       </ul>
     );
   };

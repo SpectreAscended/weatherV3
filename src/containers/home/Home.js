@@ -52,7 +52,7 @@ const Home = () => {
         snow: data?.snow?.['1h'] / 10,
         time: data.dt,
       });
-
+      console.log(data);
       searchListHandler(searchList, query);
       setIsLoading(false);
       setdataIsLoaded(true);

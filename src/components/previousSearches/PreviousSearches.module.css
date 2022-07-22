@@ -7,13 +7,12 @@ ul {
 }
 
 li {
-  display: inline-block;
-  text-transform: capitalize;
   font-size: 3rem;
 }
 
 .previous-search__list--item {
   cursor: pointer;
+  text-transform: capitalize;
   transition: color 250ms ease;
 }
 
