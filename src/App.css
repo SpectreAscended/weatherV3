@@ -55,6 +55,7 @@ html {
 }
 
 body {
+  position: relative;
   background-image: url('./assets/midnight-city.jpg');
   background-size: cover;
   background-position: top;

@@ -2,6 +2,7 @@ import React from 'react';
 import getTime from '../../utilities/getTime/getTime';
 import classes from './left.module.css';
 import MiniDisplay from '../../components/card/MiniDisplay';
+import Footer from '../../components/footer/Footer';
 
 const Left = ({ weather, loading, error }) => {
   const weatherObject = () => {
@@ -41,9 +42,12 @@ const Left = ({ weather, loading, error }) => {
   }
 
   return (
-    <div className={classes.left}>
-      <MiniDisplay>{content}</MiniDisplay>
-    </div>
+    <>
+      <div className={classes.left}>
+        <MiniDisplay>{content}</MiniDisplay>
+      </div>
+      <Footer />
+    </>
   );
 };
 
