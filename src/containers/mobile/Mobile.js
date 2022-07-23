@@ -3,7 +3,6 @@ import NavBar from '../../components/navbar/NavBar';
 import classes from './Mobile.module.css';
 import Left from '../left/Left';
 import NavList from '../../components/navList/NavList';
-import Card from '../../components/card/Card';
 import MobileWeatherDetails from '../../components/mobileWeatherDetails/MobileWeatherDetails';
 
 const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
