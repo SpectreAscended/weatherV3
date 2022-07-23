@@ -19,6 +19,7 @@ nav > div {
   flex-grow: 1;
   text-align: center;
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .nav-settings {

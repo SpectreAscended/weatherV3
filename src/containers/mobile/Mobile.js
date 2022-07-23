@@ -6,7 +6,7 @@ const Mobile = () => {
   return (
     <>
       <NavBar />
-      <section>Mobile</section>
+      <section></section>
     </>
   );
 };
