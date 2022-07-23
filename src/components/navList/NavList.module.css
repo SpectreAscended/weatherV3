@@ -7,6 +7,7 @@
   z-index: 100;
   background-color: #333;
   text-align: center;
+  /* transform: translateY(-100vh); */
 }
 
 .nav-list h3 {
@@ -35,5 +36,5 @@
 }
 
 .nav-list input {
-  max-width: 85%;
+  max-width: 60%;
 }

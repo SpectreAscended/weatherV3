@@ -2,9 +2,9 @@ import React from 'react';
 import SearchButton from '../button/SearchButton';
 import classes from './NavBar.module.css';
 
-const NavBar = props => {
+const NavBar = ({ showNavListHandler }) => {
   return (
-    <nav>
+    <nav onClick={showNavListHandler}>
       <div className={classes['nav-settings']}>
         <span>Settings</span>
       </div>

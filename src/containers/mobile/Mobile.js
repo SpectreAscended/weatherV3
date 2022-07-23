@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from '../../components/navbar/NavBar';
 import classes from './Mobile.module.css';
 import Left from '../left/Left';
 import NavList from '../../components/navList/NavList';
 
 const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
+  const [showNavList, setShowNavList] = useState(false);
+
+  const showNavListHandler = () => {
+    console.log('yo');
+    setShowNavList(prevShowNavList => (prevShowNavList = !prevShowNavList));
+  };
+
   return (
     <>
-      <NavBar />
+      <NavBar showNavListHandler={showNavListHandler} />
       <section className={classes['section-mobile']}>
-        {/* <Left weather={weather} loading={loading} error={error} /> */}
-        <NavList queryResult={queryResult} searchList={searchList} />
+        {showNavList ? (
+          <NavList
+            queryResult={queryResult}
+            searchList={searchList}
+            showNavList={showNavList}
+            showNavListHandler={showNavListHandler}
+          />
+        ) : (
+          <Left weather={weather} loading={loading} error={error} />
+        )}
       </section>
     </>
   );

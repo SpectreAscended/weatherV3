@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
 import classes from './PreviousSearches.module.css';
 
-const PreviousSearches = ({ searchList, queryResult, loaded }) => {
+const PreviousSearches = ({
+  searchList,
+  queryResult,
+  loaded,
+  showNavList,
+  showNavListHandler,
+}) => {
   const querySearch = city => {
     queryResult(city.target.innerText.toLowerCase());
+    showNavListHandler();
   };
 
   const content = searchList.map((city, index) => {
