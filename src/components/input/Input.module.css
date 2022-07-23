@@ -36,3 +36,9 @@
 .btn img {
   width: 3rem;
 }
+
+@media screen and (max-width: 600px) {
+  input::placeholder {
+    text-align: center;
+  }
+}

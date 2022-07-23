@@ -27,6 +27,7 @@ const Input = ({ queryResult, showNavList, showNavListHandler }) => {
   return (
     <form className={classes.form} onSubmit={formHandler}>
       <input
+        placeholder="Search City"
         className={classes.input}
         type="text"
         ref={inputText}
