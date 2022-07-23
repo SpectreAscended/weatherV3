@@ -6,11 +6,25 @@
   backdrop-filter: blur(0.5rem);
   /* margin-left: 20rem; */
   /* flex-grow: 0; */
-  margin: 10rem 2rem;
+  margin: 10rem 2rem 0 2rem;
   display: flex;
   justify-content: space-between;
   gap: 8rem;
   /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.card-btn {
+  background-color: red;
+  display: none;
+  /* BUG finish this button */
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  max-width: 70rem;
 }
 
 h2 {

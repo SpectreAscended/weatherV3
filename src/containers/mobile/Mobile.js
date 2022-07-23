@@ -8,7 +8,6 @@ const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
   const [showNavList, setShowNavList] = useState(false);
 
   const showNavListHandler = () => {
-    console.log('yo');
     setShowNavList(prevShowNavList => (prevShowNavList = !prevShowNavList));
   };
 
