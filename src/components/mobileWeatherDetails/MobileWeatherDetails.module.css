@@ -1,6 +1,6 @@
 .mobile-weather-details {
   background-color: rgba(13, 17, 26, 0.631);
-  padding: 8rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 2rem;
   max-width: 100%;
   /* min-width: 100%; */
@@ -12,6 +12,7 @@
   max-height: 60vh;
   overflow-y: scroll;
   margin-top: 10rem;
+  box-shadow: 0 0 15rem rgba(0, 0, 0, 0.6);
 }
 
 .mobile-weather-details::-webkit-scrollbar {
