@@ -48,6 +48,12 @@ html {
   }
 }
 
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 20%;
+  }
+}
+
 body {
   background-image: url('./assets/midnight-city.jpg');
   background-size: cover;

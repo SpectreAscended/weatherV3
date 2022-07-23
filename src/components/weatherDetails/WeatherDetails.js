@@ -23,7 +23,11 @@ const WeatherDetails = ({ weather, loading, error }) => {
         <li>
           <span>Wind: </span>
           <span className={classes['wind-dir']}>
-            <WindDirection windDir={weather.windDir} /> &nbsp;
+            <span style={{ fontWeight: '700' }}>
+              {' '}
+              <WindDirection windDir={weather.windDir} />
+            </span>{' '}
+            &nbsp;
             {weather.windSpeed} km/h
           </span>
         </li>
