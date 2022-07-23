@@ -13,6 +13,13 @@
   /* grid-template-columns: repeat(3, 1fr); */
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 .card-btn {
   background-color: red;
   display: none;

@@ -18,3 +18,9 @@ li {
   padding-bottom: 1rem;
   margin-bottom: 3rem;
 }
+
+@media screen and (max-width: 600px) {
+  .heading-current-weather {
+    display: none;
+  }
+}
