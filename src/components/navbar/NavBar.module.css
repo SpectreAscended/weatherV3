@@ -1,9 +1,8 @@
 nav {
   max-width: 100%;
-  background-color: orangered;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
 }
 
 nav > div {
