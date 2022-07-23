@@ -94,7 +94,13 @@ const Home = () => {
         </main>
       </div>
       <div className="mobile">
-        <Mobile weather={weatherData} loading={isLoading} error={isError} />
+        <Mobile
+          weather={weatherData}
+          loading={isLoading}
+          error={isError}
+          queryResult={searchCityHandler}
+          searchList={searchList}
+        />
       </div>
     </>
   );
