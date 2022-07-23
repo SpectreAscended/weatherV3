@@ -12,7 +12,11 @@ const NavList = ({
   return (
     <>
       <div className={classes['nav-list']}>
-        <Input queryResult={queryResult} />
+        <Input
+          queryResult={queryResult}
+          showNavList={showNavList}
+          showNavListHandler={showNavListHandler}
+        />
         <PreviousSearches
           queryResult={queryResult}
           searchList={searchList}

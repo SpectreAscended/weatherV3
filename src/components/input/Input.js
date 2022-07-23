@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import classes from './Input.module.css';
 import searchImg from '../../assets/Magnefying glass - black.svg';
 
-const Input = props => {
+const Input = ({ queryResult, showNavList, showNavListHandler }) => {
   const [query, setQuery] = useState();
   const inputText = useRef();
 
@@ -17,8 +17,11 @@ const Input = props => {
       inputText.current.value = '';
       return;
     }
-    props.queryResult(query);
+    queryResult(query);
     inputText.current.value = '';
+    if (showNavList) {
+      showNavListHandler();
+    }
   };
 
   return (
