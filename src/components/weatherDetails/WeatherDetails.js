@@ -21,7 +21,7 @@ const WeatherDetails = ({ weather, loading, error }) => {
           <span>{weather.pressure} kPa</span>
         </li>
         <li>
-          <span>Wind speed: </span>
+          <span>Wind: </span>
           <span className={classes['wind-dir']}>
             <WindDirection windDir={weather.windDir} /> &nbsp;
             {weather.windSpeed} km/h
@@ -58,18 +58,6 @@ const WeatherDetails = ({ weather, loading, error }) => {
         <li>
           <span>Cloud cover:</span>
           <span>{weather.cloudCover} %</span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
         </li>
       </ul>
     );

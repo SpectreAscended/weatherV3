@@ -37,7 +37,7 @@
 .mobile-weather-details li {
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 15rem;
   letter-spacing: 2px;
   font-size: 3.5rem;
 }
