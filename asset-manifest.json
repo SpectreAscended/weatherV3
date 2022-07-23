@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/weatherV3/static/css/main.d03508d2.css",
-    "main.js": "/weatherV3/static/js/main.e0968194.js",
+    "main.js": "/weatherV3/static/js/main.4f78d8d2.js",
     "static/media/midnight-city.jpg": "/weatherV3/static/media/midnight-city.f5f24c33b62f1321e027.jpg",
     "index.html": "/weatherV3/index.html",
     "static/media/Magnefying glass - black.svg": "/weatherV3/static/media/Magnefying glass - black.e6afcfbd1d2dd9b9b547b56ba73937a2.svg",
     "main.d03508d2.css.map": "/weatherV3/static/css/main.d03508d2.css.map",
-    "main.e0968194.js.map": "/weatherV3/static/js/main.e0968194.js.map"
+    "main.4f78d8d2.js.map": "/weatherV3/static/js/main.4f78d8d2.js.map"
   },
   "entrypoints": [
     "static/css/main.d03508d2.css",
-    "static/js/main.e0968194.js"
+    "static/js/main.4f78d8d2.js"
   ]
 }
