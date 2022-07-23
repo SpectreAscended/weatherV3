@@ -3,6 +3,7 @@
   padding: 8rem 2rem;
   border-radius: 2rem;
   max-width: 100%;
+  /* min-width: 100%; */
   backdrop-filter: blur(0.5rem);
   /* margin: 5rem 2rem 0 2rem; */
   display: flex;

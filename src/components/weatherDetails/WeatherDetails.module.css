@@ -23,4 +23,8 @@ li {
   .heading-current-weather {
     display: none;
   }
+
+  li {
+    margin: 0;
+  }
 }
