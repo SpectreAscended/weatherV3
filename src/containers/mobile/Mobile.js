@@ -11,7 +11,7 @@ const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
   const showNavListHandler = () => {
     setShowNavList(prevShowNavList => (prevShowNavList = !prevShowNavList));
   };
-
+  console.log('Error:' + !error);
   return (
     <>
       <NavBar showNavListHandler={showNavListHandler} />
@@ -26,11 +26,15 @@ const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
         ) : (
           <Left weather={weather} loading={loading} error={error} />
         )}
-        <MobileWeatherDetails
-          weather={weather}
-          loading={loading}
-          error={error}
-        />
+        {loading || error ? (
+          ''
+        ) : (
+          <MobileWeatherDetails
+            weather={weather}
+            loading={loading}
+            error={error}
+          />
+        )}
       </section>
     </>
   );
