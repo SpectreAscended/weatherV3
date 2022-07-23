@@ -34,6 +34,12 @@ html {
   }
 }
 
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 30%;
+  }
+}
+
 body {
   background-image: url('./assets/midnight-city.jpg');
   background-size: cover;
@@ -50,18 +56,4 @@ body {
   border-bottom: solid 1px #efefef;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-}
-
-.mobile {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
 }

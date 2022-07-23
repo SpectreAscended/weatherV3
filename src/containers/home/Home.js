@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './home.css';
 import Left from '../left/Left';
 import Right from '../right/Right';
+import Mobile from '../mobile/Mobile';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState({});
@@ -79,16 +80,23 @@ const Home = () => {
   };
 
   return (
-    <main className="main">
-      <Left weather={weatherData} loading={isLoading} error={isError} />
-      <Right
-        queryResult={searchCityHandler}
-        weather={weatherData}
-        error={isError}
-        searchList={searchList}
-        loaded={dataIsLoaded}
-      />
-    </main>
+    <>
+      <div className="desktop">
+        <main className="main">
+          <Left weather={weatherData} loading={isLoading} error={isError} />
+          <Right
+            queryResult={searchCityHandler}
+            weather={weatherData}
+            error={isError}
+            searchList={searchList}
+            loaded={dataIsLoaded}
+          />
+        </main>
+      </div>
+      <div className="mobile">
+        <Mobile weather={weatherData} loading={isLoading} error={isError} />
+      </div>
+    </>
   );
 };
 
