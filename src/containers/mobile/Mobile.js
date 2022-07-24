@@ -18,7 +18,12 @@ const Mobile = ({
   const showNavListHandler = () => {
     setShowNavList(prevShowNavList => (prevShowNavList = !prevShowNavList));
   };
-  console.log('Error:' + !error);
+
+  const enterCityHandler = () => {
+    if (loaded) return;
+    setShowNavList(true);
+  };
+
   return (
     <>
       <NavBar showNavListHandler={showNavListHandler} />
@@ -31,7 +36,12 @@ const Mobile = ({
             showNavListHandler={showNavListHandler}
           />
         ) : (
-          <Left weather={weather} loading={loading} error={error} />
+          <Left
+            weather={weather}
+            loading={loading}
+            error={error}
+            enterCityHandler={enterCityHandler}
+          />
         )}
         {!loaded || loading || error ? (
           ''

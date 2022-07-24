@@ -72,3 +72,8 @@ body {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
+
+h3 {
+  font-weight: 400;
+  letter-spacing: 2.5px;
+}
