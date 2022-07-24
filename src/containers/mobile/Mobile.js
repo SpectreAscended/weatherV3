@@ -5,7 +5,14 @@ import Left from '../left/Left';
 import NavList from '../../components/navList/NavList';
 import MobileWeatherDetails from '../../components/mobileWeatherDetails/MobileWeatherDetails';
 
-const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
+const Mobile = ({
+  weather,
+  loading,
+  error,
+  queryResult,
+  searchList,
+  loaded,
+}) => {
   const [showNavList, setShowNavList] = useState(false);
 
   const showNavListHandler = () => {
@@ -26,7 +33,7 @@ const Mobile = ({ weather, loading, error, queryResult, searchList }) => {
         ) : (
           <Left weather={weather} loading={loading} error={error} />
         )}
-        {loading || error ? (
+        {!loaded || loading || error ? (
           ''
         ) : (
           <MobileWeatherDetails

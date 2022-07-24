@@ -97,6 +97,7 @@ const Home = () => {
         <Mobile
           weather={weatherData}
           loading={isLoading}
+          loaded={dataIsLoaded}
           error={isError}
           queryResult={searchCityHandler}
           searchList={searchList}
