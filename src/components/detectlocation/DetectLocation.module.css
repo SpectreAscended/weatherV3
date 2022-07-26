@@ -1,0 +1,14 @@
+.detect-location {
+  cursor: pointer;
+  background-color: #1e5380;
+  padding: 1rem 2rem;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  transition: background 250ms ease;
+}
+
+.detect-location:hover {
+  background-color: #1b4b73;
+}

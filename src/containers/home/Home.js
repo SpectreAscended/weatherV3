@@ -10,6 +10,7 @@ const Home = () => {
   const [isError, setIsError] = useState(false);
   const [searchList, setSearchList] = useState([]);
   const [dataIsLoaded, setDataIsLoaded] = useState(false);
+  // const [coords, setCoords] = useState(null);
 
   useEffect(() => {
     const loadedList = JSON.parse(localStorage.getItem('searchList'));
@@ -79,17 +80,31 @@ const Home = () => {
     setSearchList([query, ...queryList]);
   };
 
+  // const detectLocationHandler = () => {
+  //   const showPosition = position => {
+  //     const { latitude: lat, longitude: long } = position.coords;
+  //     setCoords({ lat: lat, long: long });
+  //   };
+  //   navigator.geolocation.getCurrentPosition(showPosition);
+  // };
+
   return (
     <>
       <div className="desktop">
         <main className="main">
-          <Left weather={weatherData} loading={isLoading} error={isError} />
+          <Left
+            weather={weatherData}
+            loading={isLoading}
+            error={isError}
+            loaded={dataIsLoaded}
+          />
           <Right
             queryResult={searchCityHandler}
             weather={weatherData}
             error={isError}
             searchList={searchList}
             loaded={dataIsLoaded}
+            // detectLocation={detectLocationHandler}
           />
         </main>
       </div>

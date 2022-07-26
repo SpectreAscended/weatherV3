@@ -4,7 +4,7 @@ import classes from './left.module.css';
 import MiniDisplay from '../../components/card/MiniDisplay';
 import Footer from '../../components/footer/Footer';
 
-const Left = ({ weather, loading, error, enterCityHandler }) => {
+const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
   const weatherObject = () => {
     return (
       <>
