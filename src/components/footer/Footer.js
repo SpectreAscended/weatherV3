@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import classes from './Footer.module.css';
 
 const Footer = () => {
-  const [fullYear, setFullYear] = useState();
+  const [fullYear, setFullYear] = useState(2022);
 
   useEffect(() => {
     const date = new Date();
-    const year = date.getFullYear(2022);
+    const year = date.getFullYear();
     setFullYear(year);
   }, []);
 

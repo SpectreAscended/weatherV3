@@ -1,4 +1,5 @@
 .left {
+  position: relative;
   flex: auto;
   display: flex;
   justify-content: center;

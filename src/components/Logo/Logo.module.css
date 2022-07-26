@@ -1,0 +1,29 @@
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #1e5380, #4b7599);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.logo__box {
+  position: absolute;
+  top: 40rem;
+  left: 40rem;
+  max-width: 20rem;
+  border-radius: 50%;
+  background-color: rgb(63, 68, 43);
+}
+
+.logo__box img {
+  width: 100%;
+  opacity: 0.9;
+  object-fit: cover;
+  display: inline-block;
+}

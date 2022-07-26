@@ -1,6 +1,7 @@
 import React from 'react';
 import getTime from '../../utilities/getTime/getTime';
 import classes from './left.module.css';
+import Logo from '../../components/Logo/Logo';
 import MiniDisplay from '../../components/card/MiniDisplay';
 import Footer from '../../components/footer/Footer';
 
@@ -44,6 +45,7 @@ const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
   return (
     <>
       <div className={classes.left}>
+        <Logo />
         <MiniDisplay enterCityHandler={enterCityHandler}>{content}</MiniDisplay>
       </div>
       <Footer />
