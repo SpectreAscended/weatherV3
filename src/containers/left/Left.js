@@ -45,7 +45,7 @@ const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
   return (
     <>
       <div className={classes.left}>
-        <Logo />
+        {/* <Logo /> */}
         <MiniDisplay enterCityHandler={enterCityHandler}>{content}</MiniDisplay>
       </div>
       <Footer />
