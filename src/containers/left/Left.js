@@ -1,7 +1,6 @@
 import React from 'react';
 import getTime from '../../utilities/getTime/getTime';
-import classes from './left.module.css';
-import Logo from '../../components/Logo/Logo';
+import classes from './Left.module.css';
 import MiniDisplay from '../../components/card/MiniDisplay';
 import Footer from '../../components/footer/Footer';
 
