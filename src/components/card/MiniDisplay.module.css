@@ -4,6 +4,7 @@
   border-radius: 2rem;
   max-width: 70rem;
   backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
   margin: 10rem 2rem 0 2rem;
   display: flex;
   justify-content: space-between;

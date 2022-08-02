@@ -4,6 +4,7 @@
   border-radius: 1rem;
   max-width: 30rem;
   backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   margin-left: 20rem;
   margin-top: 10rem;
 }

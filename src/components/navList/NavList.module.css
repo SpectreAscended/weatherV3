@@ -7,6 +7,7 @@
   z-index: 100;
   background-color: #0f2a40da;
   backdrop-filter: blur(1.5rem);
+  -webkit-backdrop-filter: blur(1.5rem);
   text-align: center;
   /* transform: translateY(-100vh); */
 }
