@@ -23,7 +23,7 @@ const Right = ({
           queryResult={queryResult}
           loaded={loaded}
         />
-        <WeatherDetails weather={weather} error={error} />
+        <WeatherDetails weather={weather} error={error} loaded={loaded} />
       </div>
     </section>
   );

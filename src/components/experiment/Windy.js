@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Windy.module.css';
+import React, { useState, useCallback } from 'react';
+import classes from './Windy.module.css';
 
 const Windy = props => {
   const [webcams, setWebcams] = useState();
@@ -8,13 +8,11 @@ const Windy = props => {
     setWebcams(data);
   };
 
-  const getWindyMaps = async () => {
+  const getWindyMaps = useCallback(async () => {
     try {
       const res = await fetch(
-        'https://api.windy.com/api/webcams/v2/list/nearby=52.137166118,-106.68499726,250?show=webcams:url',
+        'https://api.windy.com/api/webcams/v2/list/nearby=52.137166118,-106.68499726,250?show=webcams:url,player',
         {
-          method: 'GET',
-          mode: 'cors',
           headers: {
             'x-windy-key': 'GgwI0LZYhsiyvFUFdbQA7gKc7B77dkwm',
           },
@@ -24,7 +22,7 @@ const Windy = props => {
       if (!res.ok) throw new Error('Windy maps has encountered a problem.');
 
       const data = await res.json();
-      console.log(data.result.webcams[0].url.current.desktop);
+      console.log(data.result.webcams);
 
       webcamHandler(data.result.webcams[1].url.current.desktop);
 
@@ -33,14 +31,15 @@ const Windy = props => {
     } catch (err) {
       console.error(err.message);
     }
-  };
+  }, []);
 
   getWindyMaps();
 
   return (
     <div>
-      WINDY
-      <a href={webcams}>Webcam</a>
+      <a className={classes['weather-link']} href={webcams}>
+        Webcam
+      </a>
     </div>
   );
 };

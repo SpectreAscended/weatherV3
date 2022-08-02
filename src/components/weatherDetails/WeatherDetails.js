@@ -2,8 +2,8 @@ import React from 'react';
 import classes from './WeatherDetails.module.css';
 import WindDirection from '../../utilities/windDirection/WindDirection';
 
-const WeatherDetails = ({ weather, loading, error }) => {
-  const weatherObject = () => {
+const WeatherDetails = ({ weather, loaded, error }) => {
+  const displayWeatherDetails = () => {
     return (
       <ul className={classes.list}>
         <li>
@@ -25,8 +25,8 @@ const WeatherDetails = ({ weather, loading, error }) => {
           <span className={classes['wind-dir']}>
             <span style={{ fontWeight: '700' }}>
               {' '}
-              <WindDirection windDir={weather.windDir} />
-            </span>{' '}
+              <WindDirection windDir={weather.windDir} />{' '}
+            </span>
             &nbsp;
             {weather.windSpeed} km/h
           </span>
@@ -70,8 +70,8 @@ const WeatherDetails = ({ weather, loading, error }) => {
   let content;
 
   if (error) content = '';
-  else if (weather.currentCity) {
-    content = weatherObject();
+  else if (loaded) {
+    content = displayWeatherDetails();
   } else {
     content = '';
   }
