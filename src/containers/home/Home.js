@@ -5,6 +5,7 @@ import Right from '../right/Right';
 import Mobile from '../mobile/Mobile';
 
 const API_KEY = process.env.REACT_APP_OPEN_WEATHER_API;
+console.log(process.env);
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState({});

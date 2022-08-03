@@ -4,6 +4,8 @@ import classes from './Windy.module.css';
 const Windy = props => {
   const [webcams, setWebcams] = useState();
 
+  const API_KEY = process.env.REACT_APP_WINDY_API;
+
   const webcamHandler = data => {
     setWebcams(data);
   };
@@ -11,10 +13,10 @@ const Windy = props => {
   const getWindyMaps = useCallback(async () => {
     try {
       const res = await fetch(
-        'https://api.windy.com/api/webcams/v2/list/nearby=52.137166118,-106.68499726,250?show=webcams:url,player',
+        `https://api.windy.com/api/webcams/v2/list/nearby=52.137166118,-106.68499726,250?show=webcams:url,player`,
         {
           headers: {
-            'x-windy-key': 'GgwI0LZYhsiyvFUFdbQA7gKc7B77dkwm',
+            'x-windy-key': API_KEY,
           },
         }
       );
@@ -31,7 +33,7 @@ const Windy = props => {
     } catch (err) {
       console.error(err.message);
     }
-  }, []);
+  }, [API_KEY]);
 
   getWindyMaps();
 

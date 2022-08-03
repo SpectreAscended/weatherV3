@@ -7,8 +7,8 @@ import './App.css';
 const App = () => {
   return (
     <>
-      <Home />
-      {/* <Windy /> */}
+      {/* <Home /> */}
+      <Windy />
     </>
   );
 };
