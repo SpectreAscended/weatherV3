@@ -4,6 +4,8 @@ import Left from '../left/Left';
 import Right from '../right/Right';
 import Mobile from '../mobile/Mobile';
 
+const API_KEY = process.env.REACT_APP_OPEN_WEATHER_API;
+
 const Home = () => {
   const [weatherData, setWeatherData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +29,7 @@ const Home = () => {
       setIsLoading(true);
 
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=d9819c90d382ddc65dcc500f8e98498f&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=metric`
       );
 
       if (!res.ok)

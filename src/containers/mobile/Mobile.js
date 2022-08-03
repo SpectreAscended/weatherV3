@@ -49,6 +49,7 @@ const Mobile = ({
           <MobileWeatherDetails
             weather={weather}
             loading={loading}
+            loaded={loaded}
             error={error}
           />
         )}
