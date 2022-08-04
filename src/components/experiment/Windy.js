@@ -26,10 +26,7 @@ const Windy = props => {
       const data = await res.json();
       console.log(data.result.webcams);
 
-      webcamHandler(data.result.webcams[1].player.day.embed);
-
-      //   setWebcams(data.result.webcams);
-      // console.log(webcams);
+      webcamHandler(data.result.webcams[9].player.day.embed);
     } catch (err) {
       console.error(err.message);
     }

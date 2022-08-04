@@ -10,7 +10,9 @@ const PreviousSearches = ({
 }) => {
   const querySearch = city => {
     queryResult(city.target.innerText.toLowerCase());
-    showNavListHandler();
+
+    // Prevents showNavListHandler from running when Desktop version is displayed
+    showNavListHandler && showNavListHandler();
   };
 
   const content = searchList.map((city, index) => {
