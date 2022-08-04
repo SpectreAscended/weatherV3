@@ -3,9 +3,6 @@
   background-color: rgba(13, 17, 26, 0.631);
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
-  height: 100vh;
-  overflow-y: scroll;
-  scrollbar-width: none;
 }
 
 .section__right::-webkit-scrollbar {
@@ -13,5 +10,8 @@
 }
 
 .section__right-container {
+  overflow-y: scroll;
+  scrollbar-width: none;
   margin: 2rem;
+  height: 85vh;
 }
