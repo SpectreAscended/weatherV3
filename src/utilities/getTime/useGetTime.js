@@ -1,7 +1,5 @@
-import React from 'react';
-
-const getTime = epoch => {
-  const date = new Date(epoch * 1000);
+const useGetTime = unixTime => {
+  const date = new Date(unixTime * 1000);
   const options = {
     weekday: 'long',
     month: 'long',
@@ -12,7 +10,7 @@ const getTime = epoch => {
     'us-EN',
     options
   )} `;
-  return <>{output}</>;
+  return output;
 };
 
-export default getTime;
+export default useGetTime;

@@ -1,10 +1,11 @@
 import React from 'react';
-import getTime from '../../utilities/getTime/getTime';
 import classes from './Left.module.css';
 import MiniDisplay from '../../components/card/MiniDisplay';
 import Footer from '../../components/footer/Footer';
+import useGetTime from '../../utilities/getTime/useGetTime';
 
 const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
+  const reportTime = useGetTime(weather.time);
   const weatherObject = () => {
     return (
       <>
@@ -19,7 +20,7 @@ const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
           <p className={classes['current-description']}>
             {weather.currentDescription}
           </p>
-          <p className={classes.time}>{getTime(weather.time)}</p>
+          <p className={classes.time}>{reportTime}</p>
         </div>
       </>
     );
