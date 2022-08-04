@@ -1,8 +1,9 @@
 import React from 'react';
 import classes from './WeatherDetails.module.css';
-import WindDirection from '../../utilities/windDirection/WindDirection';
+import useWindDirection from '../../utilities/windDirection/useWindDirection';
 
 const WeatherDetails = ({ weather, loaded, error }) => {
+  const windDirection = useWindDirection(weather.windDir);
   const displayWeatherDetails = () => {
     return (
       <ul className={classes.list}>
@@ -23,10 +24,7 @@ const WeatherDetails = ({ weather, loaded, error }) => {
         <li>
           <span>Wind: </span>
           <span className={classes['wind-dir']}>
-            <span style={{ fontWeight: '700' }}>
-              {' '}
-              <WindDirection windDir={weather.windDir} />{' '}
-            </span>
+            <span style={{ fontWeight: '700' }}> {windDirection} </span>
             &nbsp;
             {weather.windSpeed} km/h
           </span>
