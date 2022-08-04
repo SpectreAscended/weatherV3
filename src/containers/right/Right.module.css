@@ -5,13 +5,13 @@
   -webkit-backdrop-filter: blur(1rem);
 }
 
-.section__right::-webkit-scrollbar {
+.section__right::-webkit-scrollbar,
+.section__right-container::-webkit-scrollbar {
   display: none;
 }
 
 .section__right-container {
   overflow-y: scroll;
-  scrollbar-width: none;
   margin: 2rem;
   height: 85vh;
 }
