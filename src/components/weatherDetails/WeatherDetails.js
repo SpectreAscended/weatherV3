@@ -1,8 +1,12 @@
 import React from 'react';
 import classes from './WeatherDetails.module.css';
 import useWindDirection from '../../utilities/windDirection/useWindDirection';
+import useGetLocalTime from '../../utilities/getTime/useGetLocalTime';
 
 const WeatherDetails = ({ weather, loaded, error }) => {
+  const sunrise = useGetLocalTime(weather.sunrise);
+  const sunset = useGetLocalTime(weather.sunset);
+
   const windDirection = useWindDirection(weather.windDir);
   const displayWeatherDetails = () => {
     return (
@@ -60,6 +64,14 @@ const WeatherDetails = ({ weather, loaded, error }) => {
         <li>
           <span>Cloud cover:</span>
           <span>{weather.cloudCover} %</span>
+        </li>
+        <li>
+          <span>Sunrise</span>
+          <span>{sunrise}</span>
+        </li>
+        <li>
+          <span>Sunset</span>
+          <span>{sunset}</span>
         </li>
       </ul>
     );

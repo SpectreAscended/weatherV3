@@ -55,6 +55,9 @@ const Home = () => {
         rain: data?.rain?.['1h'],
         snow: data?.snow?.['1h'] / 10,
         time: data.dt,
+        timezone: data.timezone,
+        sunrise: data.sys.sunrise + data.timezone,
+        sunset: data.sys.sunset + data.timezone,
       });
       console.log(data);
       searchListHandler(searchList, query);
@@ -89,7 +92,7 @@ const Home = () => {
   //   };
   //   navigator.geolocation.getCurrentPosition(showPosition);
   // };
-
+  console.log(weatherData);
   return (
     <>
       <div className="desktop">
