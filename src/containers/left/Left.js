@@ -6,7 +6,8 @@ import useGetTime from '../../utilities/getTime/useGetTime';
 
 const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
   const reportTime = useGetTime(weather.time);
-  const weatherObject = () => {
+
+  const weatherDetails = () => {
     return (
       <>
         <div className={classes['current-temp']}>
@@ -37,7 +38,7 @@ const Left = ({ weather, loading, error, enterCityHandler, loaded }) => {
       </p>
     );
   } else if (weather.currentCity) {
-    content = weatherObject();
+    content = weatherDetails();
   } else {
     content = <p className={classes.loading}>Please enter a city</p>;
   }
