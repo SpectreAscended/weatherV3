@@ -26,7 +26,7 @@ const Windy = props => {
       const data = await res.json();
       console.log(data.result.webcams);
 
-      webcamHandler(data.result.webcams[1].url.current.desktop);
+      webcamHandler(data.result.webcams[1].player.day.embed);
 
       //   setWebcams(data.result.webcams);
       // console.log(webcams);
@@ -39,9 +39,17 @@ const Windy = props => {
 
   return (
     <div>
-      <a className={classes['weather-link']} href={webcams}>
+      {/* <a className={classes['weather-link']} href={webcams}>
         Webcam
-      </a>
+      </a> */}
+      <iframe
+        className={classes.webcam}
+        src={webcams}
+        frameBorder="0"
+        width="700"
+        height="400"
+        title="webcam"
+      ></iframe>
     </div>
   );
 };
