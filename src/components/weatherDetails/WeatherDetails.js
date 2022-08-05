@@ -8,6 +8,7 @@ const WeatherDetails = ({ weather, loaded, error }) => {
   const sunset = useGetLocalTime(weather.sunset);
 
   const windDirection = useWindDirection(weather.windDir);
+
   const displayWeatherDetails = () => {
     return (
       <ul className={classes.list}>

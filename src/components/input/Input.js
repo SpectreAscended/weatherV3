@@ -7,18 +7,18 @@ const Input = ({ queryResult, showNavList, showNavListHandler }) => {
   const inputText = useRef();
 
   const queryHandler = () => {
-    const cleanQuery = inputText.current.value.trim().toLowerCase();
+    const cleanQuery = inputText.current.value.toLowerCase();
     setQuery(cleanQuery);
   };
 
   const formHandler = e => {
     e.preventDefault();
     if (inputText.current.value.trim().length === 0) {
-      inputText.current.value = '';
+      setQuery('');
       return;
     }
     queryResult(query);
-    inputText.current.value = '';
+    setQuery('');
     if (showNavList) {
       showNavListHandler();
     }
@@ -33,6 +33,7 @@ const Input = ({ queryResult, showNavList, showNavListHandler }) => {
         ref={inputText}
         autoFocus
         onChange={queryHandler}
+        value={query}
       />
       <button className={classes.btn}>
         <img src={searchImg} alt="Search" />
